@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070b14;
+  --foreground: #e7edf9;
+  --surface: #0d1322;
+  --surface-soft: #111a2e;
+  --muted: #9aa8c7;
+  --border: #24314f;
+  --accent: #4da0ff;
+  --accent-soft: #7bb7ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+.grid-overlay {
+  background-image: linear-gradient(
+      rgba(77, 160, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(77, 160, 255, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.glass-panel {
+  background: linear-gradient(
+    150deg,
+    rgba(20, 30, 52, 0.88),
+    rgba(12, 18, 32, 0.82)
+  );
+  border: 1px solid rgba(114, 146, 212, 0.28);
+  box-shadow: inset 0 1px 0 rgba(161, 191, 255, 0.22),
+    0 30px 70px rgba(2, 9, 22, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #dde9ff, #9fc3ff 55%, #78acff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-anchor {
+  scroll-margin-top: 90px;
+}
